@@ -39,7 +39,7 @@ const dictionary: Dictionary = {
     'sections.stacks.title': 'Stacks / Skills',
     'sections.contact.title': 'Contact',
     'sections.contact.subtitle': 'Let\'s work together. Feel free to reach out!',
-    'footer.license': 'License: MIT',
+    'footer.license': '@From Xofai with love',
   },
   vi: {
     'nav.about': 'Giới thiệu',
@@ -57,7 +57,7 @@ const dictionary: Dictionary = {
     'sections.stacks.title': 'Công nghệ / Kỹ năng',
     'sections.contact.title': 'Liên hệ',
     'sections.contact.subtitle': 'Hợp tác ngay nhé. Bạn có thể liên hệ bất cứ lúc nào!',
-    'footer.license': 'Giấy phép: MIT',
+    'footer.license': '@From Xofai with love',
   },
 };
 
