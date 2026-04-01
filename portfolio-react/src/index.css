@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+html {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+body {
+  @apply bg-[#f3f7f6] text-[#062019] antialiased dark:bg-[#001b17] dark:text-[#e7f5f2];
+}
+
+::selection {
+  background: rgba(0, 53, 47, 0.18);
+}
+

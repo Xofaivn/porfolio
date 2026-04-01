@@ -1,0 +1,71 @@
+import { useMemo } from 'react';
+import { type Language, useLanguage } from '../context/LanguageContext';
+
+type Dictionary = Record<
+  Language,
+  Record<
+    | 'nav.about'
+    | 'nav.info'
+    | 'nav.projects'
+    | 'nav.stacks'
+    | 'nav.contact'
+    | 'common.backToTop'
+    | 'sections.about.title'
+    | 'sections.about.subtitle'
+    | 'sections.about.role'
+    | 'sections.info.title'
+    | 'sections.projects.title'
+    | 'sections.stacks.title'
+    | 'sections.contact.title'
+    | 'sections.contact.subtitle'
+    | 'footer.license',
+    string
+  >
+>;
+
+const dictionary: Dictionary = {
+  en: {
+    'nav.about': 'About Me',
+    'nav.info': 'Info',
+    'nav.projects': 'Projects',
+    'nav.stacks': 'Stacks / Skills',
+    'nav.contact': 'Contact',
+    'common.backToTop': 'Back to top',
+    'sections.about.title': 'Software Developer',
+    'sections.about.subtitle': 'Build clean, performant, user-focused web apps.',
+    'sections.about.role': 'React • TypeScript • Tailwind',
+    'sections.info.title': 'Info',
+    'sections.projects.title': 'Projects',
+    'sections.stacks.title': 'Stacks / Skills',
+    'sections.contact.title': 'Contact',
+    'sections.contact.subtitle': 'Let’s work together. Feel free to reach out!',
+    'footer.license': 'License: MIT',
+  },
+  vi: {
+    'nav.about': 'Giới thiệu',
+    'nav.info': 'Thông tin',
+    'nav.projects': 'Dự án',
+    'nav.stacks': 'Công nghệ / Kỹ năng',
+    'nav.contact': 'Liên hệ',
+    'common.backToTop': 'Về đầu trang',
+    'sections.about.title': 'SOFTWARE DEVELOPER',
+    'sections.about.subtitle':
+      'Xây dựng web app sạch sẽ, hiệu năng tốt, tập trung trải nghiệm người dùng.',
+    'sections.about.role': 'React • TypeScript • Tailwind',
+    'sections.info.title': 'Thông tin',
+    'sections.projects.title': 'Dự án',
+    'sections.stacks.title': 'Công nghệ / Kỹ năng',
+    'sections.contact.title': 'Liên hệ',
+    'sections.contact.subtitle': 'Hợp tác ngay nhé. Bạn có thể liên hệ bất cứ lúc nào!',
+    'footer.license': 'Giấy phép: MIT',
+  },
+};
+
+export function useI18n() {
+  const { language } = useLanguage();
+  const t = useMemo(() => (key: keyof Dictionary['en']) => dictionary[language][key] ?? String(key), [
+    language,
+  ]);
+  return { t };
+}
+
