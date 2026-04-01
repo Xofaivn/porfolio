@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { GitBranch, Mail, ShieldCheck, Star } from 'lucide-react';
+import {  ShieldCheck, Star } from 'lucide-react';
 import { GlassCard } from '../components/GlassCard';
 import { awardsByLang, education, englishCertificatesByLang, gpa } from '../content/siteData';
 import { useI18n } from '../hooks/useI18n';
@@ -7,13 +7,7 @@ import { useLanguageMode } from '../hooks/useLanguageMode';
 import bachKhoaLogo from '../assets/logobachkhoa.png';
 
 
-function SocialIcon({ label }: { label: string }) {
-  const lower = label.toLowerCase();
-  if (lower.includes('github')) return <GitBranch size={16} />;
-  if (lower.includes('linkedin')) return <Star size={16} />;
-  if (lower.includes('email')) return <Mail size={16} />;
-  return <ShieldCheck size={16} />;
-}
+
 
 export function InfoSection() {
   const { t } = useI18n();
