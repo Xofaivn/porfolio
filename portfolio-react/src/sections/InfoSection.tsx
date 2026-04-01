@@ -55,7 +55,7 @@ export function InfoSection() {
               </div>
             </div>
 
-            <p className="text-sm font-bold text-white/95">English Certificates</p>
+            <p className="text-sm font-bold text-white/95">{language === 'vi' ? 'Chứng chỉ tiếng Anh' : 'English Certificates'}</p>
             <div className="mt-3 flex flex-col gap-2">
               {englishCertificatesByLang[language].map((c) => (
                 <div key={c} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-3">
@@ -69,7 +69,7 @@ export function InfoSection() {
           </GlassCard>
 
           <GlassCard>
-            <p className="text-sm font-bold text-white/95">Awards</p>
+            <p className="text-sm font-bold text-white/95">{language === 'vi' ? 'Giải thưởng' : 'Awards'}</p>
             <div className="mt-3 flex flex-col gap-2">
               {awardsByLang[language].map((a) => (
                 <div key={a} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-3">
