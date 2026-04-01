@@ -50,7 +50,7 @@ const dictionary: Dictionary = {
     'common.backToTop': 'Về đầu trang',
     'sections.about.title': 'SOFTWARE DEVELOPER',
     'sections.about.subtitle':
-      '🎓 I\'m currently a 3rd-year student at Ho Chi Minh City University of Technology (HCMUT) 💻 Passionate about Software Development and Machine Learning',
+      '🎓 Tôi hiện là sinh viên năm 3 tại Đại học Công nghệ Thành phố Hồ Chí Minh (HCMUT) 💻 Passionate about Software Development and Machine Learning',
     'sections.about.role': 'React • TypeScript • Tailwind',
     'sections.info.title': 'Thông tin',
     'sections.projects.title': 'Dự án',
